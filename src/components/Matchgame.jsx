@@ -122,7 +122,7 @@ export default function Matchgame() {
         setMessage("Attempt failed.");
       }
 
-      if (attempts >= 2) {
+      if (attempts >= 8) {
         setGameOver(true);
       }
     }

@@ -26,31 +26,31 @@ export default function Matchgame() {
       revealed: false,
     },
     {
-      letter: "cat",
+      letter: "cherry",
 
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLUguvVO3KZqrzX-hFf1W-3rxt2a4qVJRH4A&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNZ4jM4inEqAMEJ8sakWhwXkDMSEgxhh6QmPb9j8DfgLyoR4wbN5bBBSvXiQ&s",
       revealed: false,
     },
     {
-      letter: "icecream",
+      letter: "mango",
 
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwuglNb-Q17hpfZlsNb_zDbCPsPsCsdJn7Lg&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSdVkuRZ57YQWn1syMjWd1WslBI_0w1Oit7A5HLHTlrA4grWCJvnotzAEPPQ&s",
       revealed: false,
     },
     {
-      letter: "garden",
+      letter: "grapes",
 
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYH2pH8KDHyQ_lP1sfxCmO_yFxg9BcvEGZVg&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4DNJklEns9inArVYfXzusTt_fOo7tqAaV_lbTCqK5k7tQ1zZcuNHI4bBMrA&s",
       revealed: false,
     },
     {
-      letter: "fan",
+      letter: "watermelon",
 
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmZ8-hn6Y8rRdj9zewnjTXJKqgYka3d3D3wA&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-AMkgYHDHi65sniKPdH38PAaJhmLS6gFZvQ&usqp=CAU",
       revealed: false,
     },
     {
@@ -61,31 +61,31 @@ export default function Matchgame() {
       revealed: false,
     },
     {
-      letter: "hills",
+      letter: "kiwi",
 
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv7Um9AwPjvdrGQT4sFSgVUWA6uW4-_aURzg&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1_hWv-vUYNwk8bnB0J8BFMMkw7GPv8psP2A&usqp=CAU",
       revealed: false,
     },
     {
-      letter: "earphone",
+      letter: "pineapple",
 
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjfafsfkLdYA8DMdN3VI5w8dJShjLqFKt2NQ&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBjY4-cVX1KO5RbTTT2rqf9SYpl5U8ozux2A&usqp=CAU",
       revealed: false,
     },
   ]);
 
   const [blueCards, setBlueCards] = useState([
-    { letter: "a", revealed: false },
-    { letter: "b", revealed: false },
     { letter: "c", revealed: false },
-    { letter: "o", revealed: false },
-    { letter: "e", revealed: false },
-    { letter: "f", revealed: false },
+    { letter: "b", revealed: false },
+    { letter: "k", revealed: false },
+    { letter: "w", revealed: false },
     { letter: "g", revealed: false },
-    { letter: "h", revealed: false },
-    { letter: "i", revealed: false },
+    { letter: "m", revealed: false },
+    { letter: "o", revealed: false },
+    { letter: "a", revealed: false },
+    { letter: "p", revealed: false },
   ]);
   const [attempts, setAttempts] = useState(0);
   const [bananas, setBananas] = useState(0);
@@ -127,6 +127,13 @@ export default function Matchgame() {
       }
     }
   };
+
+  
+
+
+  
+  
+  
   const restartGame = () => {
     setPinkCards(pinkCards.map((card) => ({ ...card, revealed: false })));
     setBlueCards(blueCards.map((card) => ({ ...card, revealed: false })));
@@ -247,6 +254,21 @@ export default function Matchgame() {
           You have earned: {bananas} bananas
         </Text>
         {gameOver && (
+          <Flex justify="center">
+            {Array.from({ length: bananas }).map((_, index) => (
+              <img
+                key={index}
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgHw0i7wV7rYWZHa8gSNPgQOUJDSUfXipEtA&usqp=CAU" // Replace with the URL of your banana image
+                alt="Banana"
+                style={{ marginRight: '0.5rem', width: '50px', height: '50px' }}
+              />
+            ))}
+          </Flex>
+        )}
+
+
+
+        {gameOver && (
           <Button
             onClick={restartGame}
             bg="green.500"
@@ -262,5 +284,10 @@ export default function Matchgame() {
         )}
       </Flex>
     </Container>
+
+
+
+    
+     
   );
 }

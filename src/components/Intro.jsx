@@ -17,7 +17,6 @@ const cardData = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZLfXrczaUKurFKE7NXcOGDq4lOqZgkKT1kY3_7cUwrWpOOv369ZPHjNdmBA&s",
     title: "Welcome Kiddo",
     buttonText: "Start",
-    color:"red"
   },
   {
     image:
